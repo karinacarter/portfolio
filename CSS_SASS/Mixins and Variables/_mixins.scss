@@ -1,0 +1,136 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Angled corner border via a background Griadents.  
+// 2 - Angled Corner with borders. 
+// 3 - Basic background Graident 
+// 4 - Remove Bullets, margin & padding from menu. 
+// 5 - Arrow on TBMG Main Menu
+//
+//////////////////////////
+
+
+
+
+
+//////////////////////////
+//
+// 1 - Angled corner border via a background Griadents.  
+//
+//////////////////////////
+
+
+@mixin background-bevel($background-color:$mainColor, $corner-top-left-bevel:10px, $corner-top-right-bevel:10px, $corner-bottom-right-bevel:10px, $corner-bottom-left-bevel:10px) {
+    
+    background: #{$background-color}; // Fallback
+    @include background(
+        linear-gradient(135deg, transparent $corner-top-left-bevel, $background-color $corner-top-left-bevel),
+        linear-gradient(225deg, transparent $corner-top-right-bevel, $background-color $corner-top-right-bevel),
+        linear-gradient(315deg, transparent $corner-bottom-right-bevel, $background-color $corner-bottom-right-bevel),
+        linear-gradient(45deg,  transparent $corner-bottom-left-bevel, $background-color $corner-bottom-left-bevel)
+    );
+    background-position:
+        top left,
+        top right,
+        bottom right,
+        bottom left;
+    background-size: 50.5% 51%;
+    background-repeat: no-repeat;
+    @content;
+}
+
+//////////////////////////
+//
+// 2 - Angled Corner with borders. 
+//
+//////////////////////////
+
+
+@mixin folded_corner($block_color, $corner_size, $bg_color, $rounded: false, $darkenCorner:false, $addShadow:false) {
+  position:relative;
+   background: $block_color;
+  overflow: hidden;
+  
+  @if $rounded == true {
+    @include border-radius($corner_size * 0.2); }
+  
+  &:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     border-width: 0 $corner_size $corner_size 0;
+     border-style: solid;
+     border-color: $bg_color $bg_color $block_color $block_color;
+	 @if $darkenCorner == true { background: $block_color;}
+       
+	 @if $darkenCorner == true { @include box-shadow(0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2));}
+     display:block; width:0; /* Firefox 3.0 damage limitation */
+     
+     @if $rounded == true {
+       @include border-bottom-left-radius($corner_size * 0.2); }}
+}
+
+
+//////////////////////////
+//
+// 3 - Basic background Graident 
+//
+//////////////////////////
+
+ 
+ @mixin header-graidents($ends,$middle){
+	
+	  @include background-image(linear-gradient($ends, $middle 45%, $middle 55%, $ends));
+
+}
+    
+//////////////////////////
+//
+// 4 - Remove Bullets, margin & padding from menu. 
+//
+//////////////////////////
+
+
+@mixin stripMenus(){
+	
+	@include no-bullet();
+	margin:0px;
+	padding: 0px;
+}	
+
+
+//////////////////////////
+//
+// 5 - Arrow on TBMG Main Menu
+//
+//////////////////////////
+
+@mixin arrow($side: "right", $align: "center", $size: 20px, $color: #f6f6f6, $borderColor: "none", $borderSize: 3px) {
+  $selector: "&:after, &:before";
+  @if $borderColor == "none" {
+    $selector: "&:after";
+  }
+  #{$selector} {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    visibility: visible;
+  }
+  
+  &:after {
+    border-width: $size;
+    @include arrow_helper($size, $color, $size, $side, $align);
+  }
+  
+  @if $borderColor != "none" {
+    &:before {
+      border-width: $borderSize + $size;
+      @include arrow_helper($size + $borderSize, $borderColor, $size - $borderSize, $side, $align);
+    }
+  }
+}

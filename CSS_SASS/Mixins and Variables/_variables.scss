@@ -1,0 +1,194 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+//  1 - Typography 
+//  2 - Colors 
+//  3 - Graphics
+//  4 - Susy Variables 
+//  5 - Break Points
+//  6 - Margins and Padding 
+//
+//////////////////////////
+
+
+
+
+
+//////////////////////////
+//
+//  1 - Typography 
+//
+//////////////////////////
+
+	//// Font weights ////
+	$light: 100;
+	$regular: 400;
+	$bold: 600;
+	////////////////
+	
+	
+	//// Base Font ////
+	$base-font-family: 'HP Simplified Regular', Arial, Helvetica, sans-serif;
+	$base-font-weight: $regular;
+	$base-font-size: 14px;
+	$base-line-height: 18px;
+	////////////////
+	
+	//// Body Font ////
+	//$body-font-size: 14px;
+	$body-bold-family:'HP Simplified Bold',  Arial, Helvetica, sans-serif;
+	$body-light-family: 'HP Simplified Light',  Arial, Helvetica, sans-serif;
+	//////////////// 
+	
+	//// Headings ////
+	$header-font-weight: $bold;
+	$header-font-family: 'HP Simplified Bold',  Arial, Helvetica, sans-serif;
+	$header-font-size: 16px;
+	$header-line-height: 18px;
+	////////////////
+
+
+//////////////////////////
+//
+//  2 - Colors 
+//
+//////////////////////////
+
+	//// Standard Colors //// 
+	$white: #ffffff;
+	$black:#000000;
+	
+	$container-bg-color:$white;
+	$text-color:#545351;
+	////////////////////
+	
+	//// Main Color: Lght Grey ////
+	$color-main:#d4cfcd; // (Grey)
+	$color-lighter-main:lighten($color-main,15.2%); // Slightly lighter Aqua Blue
+	$color-darker-main:darken($color-main,35%); // Slightly Darker Aqua Blue
+	////////////////
+		
+	//// Accent color 1 : HP Blue ////
+	$color-accent1:#0096D6; // HP Blue
+	$color-lighter-accent1:lighten($color-accent1,15%); // Slightly lighter HP Blue
+	$color-darker-accent1:darken($color-accent1,15%); // Slightly Darker HP Blue
+	////////////////
+	
+	//// Accent color 2 : Pink from homepage ////
+	$color-accent2:#ff5b8c; // Pink
+	$color-lighter-accent2:lighten($color-accent2,15%); // Slightly Lighter Pink
+	$color-darker-accent2:darken($color-accent2,15%); // Slightly Darker Pink
+	////////////////
+	
+	//// Accent color 3 : Green from homepage ////
+	$color-accent3:#00cba3; // Green
+	$color-lighter-accent3:lighten($color-accent3,15%); // Slightly Lighter Green
+	$color-darker-accent3:darken($color-accent3,15%); // Slightly Darker Green
+	
+	//// Accent Color 4: Red from Content Notifications
+	$color-accent4:#ff0000; // Red
+	$color-lighter-accent4:lighten($color-accent4,15%); // Slightly Lighter Red
+	$color-darker-accent4:darken($color-accent4,15%); // Slightly Darker Red
+	////////////////
+	
+	
+	//// Body Graident ////
+	$body-bg-graident-start:$color-accent1;
+	$body-bg-graident-end:$color-main;
+	$body-bg-graident-direction: top left;
+	$body-bg-graident-type:linear-gradient;
+	////////////////
+
+
+
+//////////////////////////
+//
+//  3 - Graphics
+//
+//////////////////////////
+	
+	//// Body ////
+	$body-bg-image: 'bodyBG.png';
+	////////////////
+	
+	//// Header ////
+	$header-display-image:  true !default; // true or false. This checks if the headers should have a background image. 
+	$header-background-image-small: 'small_header_grid.png';
+	$header-background-image-large: 'HP_NASA_KV_3.jpg';
+	////////////////
+
+
+//////////////////////////
+//
+//  4 - Susy Variables 
+//
+//////////////////////////
+
+
+// Configuring Susy Defaults
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$shorthand: 12 1/4 fluid float inside;
+
+
+
+
+
+	//// SUSY Grid ////
+	$total-columns  : 12;
+	$column-width   : 5.857em; 
+	$gutter-width   : 1.429em;
+	$grid-padding   :0;
+	$container-style: magic;
+	
+	$legacy-support-for-ie  : true;
+	$legacy-support-for-ie6 : $legacy-support-for-ie;
+	$legacy-support-for-ie7 : $legacy-support-for-ie;
+	
+	$legacy-support-for-ie8 : $legacy-support-for-ie;
+	$half-total-columns: 	$total-columns/2;
+
+	$break-1:6;
+	$break-2:10;
+		
+	////////////////
+		
+//////////////////////////
+//
+//  5 - Break Points
+//
+//////////////////////////
+
+	//// Break Points  ////
+
+	$small: 0px 699px; //320 px;
+	$medium:700px 1150px; // 768
+	$large: 1151px; // 1024px
+		
+	
+	////////////////
+	
+	
+//////////////////////////
+//
+//  6 - Margins and Padding 
+//
+//////////////////////////
+
+	//// Margins ////
+	$sidebar-margin:0.6875em; // (11/16) == .6875 em
+	////////////////
+	
+	//// Padding ////
+	$default-padding:1em;
+	$half-padding: $default-padding/2;
+	$double-padding: $default-padding*1.5;
+	////////////////
+
