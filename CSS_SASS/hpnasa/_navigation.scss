@@ -1,0 +1,188 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Breadcrumbs
+// 2 - Main Menu 
+// 3 - Footer
+// 4 - Mobile Menu
+// 5 - About Menu
+// 6 - Language Menu
+//
+//////////////////////////
+
+//////////////////////////
+//
+// 1 - Breadcrumbs
+//
+//////////////////////////
+	
+	._breadcrumbs,
+	#footer .nav{
+		@include horizontal-list;
+	
+	}	
+	._breadcrumbs li{
+	margin:9px 0px 10px 0px;
+}
+
+
+//////////////////////////
+//
+// 2 - Main Menu 
+//
+//////////////////////////
+
+	.menu_main,
+	.get_started{
+		color:$white;
+		@include horizontal-list;
+		li{
+			margin:0px;
+			padding:0px;
+			&:last-of-type a{
+				border-right: 0px;
+			}
+		}
+		a{			
+			display: block;
+			color:$white;
+			border-bottom: 4px solid transparent;
+			border-right: 1px solid $white;
+			text-decoration: none;
+			padding: $half-padding $half-padding;
+			&:hover{
+				text-decoration: none;
+				color:$white ;
+				border-bottom: 4px solid $white;
+			}
+		}
+		.active a{
+			text-decoration: none;
+			background-color:$color-darker-main;
+			border-bottom: 4px solid $white;
+		}
+	}//menu_main
+
+	._nav ul,
+	.lang-inline{
+		float: right;
+	}
+
+
+
+//////////////////////////
+//
+// 3 - Footer
+//
+//////////////////////////
+
+	#footer .menu{
+		margin:5px 0%;
+		@include breakpoint($small) {
+			margin:5px;		
+		}
+	}
+	
+	#footer .menu li{
+		padding:0px $default-padding;
+		border-right: 1px solid $color-darker-main;
+		@include breakpoint($small) {
+			padding:0px;		
+		}
+	}
+	
+	#footer .menu li:last-of-type{
+		border-right: 0;
+	}
+	
+	#footer ul a {
+		color:$white;
+		padding:5px;
+		@include breakpoint($small) {
+			padding:5px;		
+		}
+	}
+
+
+
+
+
+//////////////////////////
+//
+// 4 - Mobile Menu
+//
+//////////////////////////
+
+
+	.slicknav_menu {
+		display:none;
+		background-color: $color-main;
+		ul.slicknav_nav{border-top: 1px solid $white;}
+	}
+	.slicknav_btn{
+		padding:0px;
+		margin: 0px;
+	}
+	#hpmobilemenu{
+		display: none;
+	}
+		@include breakpoint($small) {
+		._getstarted,
+		._nav {
+			display:none;
+		}
+		.slicknav_menu{
+			display:block;
+		}
+	}
+
+//////////////////////////
+//
+// 5 - About Menu
+//
+//////////////////////////
+
+	
+	.aboutMenu{
+		@include no-bullet;
+		background-color: $color-main;
+		@include breakpoint($medium) {
+			@include horizontal-list;
+		}
+		@include breakpoint($large) {
+			@include horizontal-list;
+		}
+	}
+	.aboutMenu li{
+		text-align: center;
+		width:30%;
+		@include breakpoint($small) {
+			text-align: left;
+			width:100%;
+		}
+		a{
+			padding:10px 5px;
+			display: block;
+			color:$text-color;
+			&:hover{
+				color: $color-accent1;
+				text-decoration: none;
+			}
+		}
+	}
+
+//////////////////////////
+//
+// 6 - Language Menu
+//
+//////////////////////////
+
+	.lang-active a{
+		color:$white;
+	}
+
+	.nav>li>a:hover, .nav>li>a:focus {
+	    text-decoration: inherit;
+	    background-color: inherit;
+	}

@@ -1,0 +1,88 @@
+#container,
+#footer,
+#loginheader{ 
+	 @include container();
+	 @include clearfix;
+	 //max-width:1000px;	  
+}
+
+._getstarted{
+		@include span( 6 wide of 12);
+		@include breakpoint($small) {
+			@include span( 12 of 12);
+
+		}
+		@include breakpoint($medium) {
+			@include span( 5 of 12);
+
+		}
+}
+._nav{
+			@include span( 6 last of 12);
+			@include breakpoint($small) {
+			@include span( 12 of 12);
+
+		}
+		@include breakpoint($medium) {
+			@include span( 7 of 12);
+
+		}
+
+}
+
+._breadcrumbs{
+			@include span( 9 of 12);
+			@include breakpoint($small) {
+			@include span( 12 of 12);
+
+		}
+		@include breakpoint($medium) {
+			@include span( 8 of 12);
+
+		}
+
+
+}
+.mod-languages{
+	@include span( 3 omega of 12);
+	@include breakpoint($small) {
+			@include span( 12 of 12);
+
+		}
+	@include breakpoint($medium) {
+			@include span( 4 of 12);
+
+		}
+}
+aside {
+	.entrant_videos,
+	.prize_sponsor,
+	.view_entries_by,
+	._right,
+	._right_home
+	{
+	@include span( 6 of 12);
+		@include breakpoint($small) {
+			@include span( 12 of 12);
+
+		}
+	}
+}
+
+#footer{
+	.intel_logo{
+		@include span( 7 wider omega of 12);
+		@include breakpoint($small) {
+			@include span(12 of 12);
+		}
+
+	}
+	.footer_nav,
+	.socialicons{
+		@include span( 5 narrow alpha of 12);
+		@include breakpoint($small) {
+			@include span(12 of 12);
+		}
+
+	}
+}

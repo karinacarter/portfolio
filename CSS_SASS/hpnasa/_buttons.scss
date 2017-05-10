@@ -1,0 +1,127 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Right Sidebar
+// 2 - Google Custom Search
+// 3 - Blue Buttons
+// 4 - Entry Sumbit button (#ff_elem3261) 
+//
+//////////////////////////
+
+
+//////////////////////////
+//
+// 1 - Right Sidebar
+//
+//////////////////////////
+
+	#right_sidebar ul {
+		@include stripMenus();
+		a {
+			display: block;
+			color:$black;
+			background-color: $color-main;
+			padding: pxtoem(9,16)  pxtoem(11,16) pxtoem(9,16) pxtoem(11,16)	;}
+			li{
+				border-bottom: 1px solid $white;}
+	}
+	
+	#right_sidebar .get_started a{
+		padding:$half-padding;
+		margin-bottom:$sidebar-margin;
+	}
+
+//////////////////////////
+//
+// 2 - Google Custom Search
+//
+//////////////////////////
+
+input.gsc-search-button {
+    text-shadow: 2px 2px 4px #021A36;
+    font-family: $base-font-family;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0.22px;
+	&:hover{
+		border-color: $color-accent1;
+	    background-color: $color-accent1;
+	    color: $white;
+	}
+	.ns-button:focus, .ns-button:hover {
+	    border-color: #007dba;
+	    background-color: #007dba;
+	    color: #fff;
+	}
+}
+
+//////////////////////////
+//
+// 3 - Blue Buttons
+//
+//////////////////////////
+
+
+.blueButton,
+#bfSubmitButton,
+#ff_elem3261{
+    display: inline-block;
+    border-style: solid!important;
+    border-width: 1px!important;
+    border-radius: 4px;
+    height: auto;
+    margin: 20px 0 0;
+    padding: 14px 49px;
+    font-family: $body-light-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    white-space: nowrap;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    color:$white; 
+    margin: 10px;
+    text-decoration: none;
+    border-color: $color-accent1;
+	    background-color: $color-accent1;
+	    text-decoration: none;
+	    &:focus,
+	    &:hover{
+		      border-color: $color-accent1;
+		    background-color: $white;
+		    color: $color-accent1;
+		    text-decoration: none;
+	    }
+	@include breakpoint($small) {
+		border-color: #007dba;
+	    background-color: #007dba;
+	    color: #fff;
+	    text-decoration: none;
+	}
+}
+
+//////////////////////////
+//
+// 4 - Entry Sumbit button (#ff_elem3261) 
+//
+//////////////////////////
+		
+#ff_elem3261{
+	    padding: 10px;
+	    border-color: #007dba;
+	    background-color: #007dba;
+	    color: #fff;
+	    &:focus,
+		&:hover{
+	      border-color: #d4cfcd;
+		  background-color: #d4cfcd;
+		  color: #fff;
+		  text-decoration: none;
+    }
+}		
+		
+

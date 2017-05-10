@@ -1,0 +1,43 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Splash Module
+// 2 - Homepage Video
+//
+//////////////////////////
+
+
+//////////////////////////
+//
+// 1 - Splash Module
+//
+//////////////////////////
+.splash{
+	
+	font-size: 1.10em;
+    line-height: 1.5em;
+    
+}
+//////////////////////////
+//
+// 2 - Homepage Video
+//
+//////////////////////////
+
+.homeVideo {
+	width:75%;
+    position: relative;
+    padding-bottom: 40%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    margin: 0 auto;
+	iframe,
+	object,
+	embed {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+}
