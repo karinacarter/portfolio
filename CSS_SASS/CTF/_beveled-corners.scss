@@ -1,0 +1,105 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Splash Module
+// 2 - Left Sidebar on the homepage
+// 3 - Right Sidebar
+// 4 - Main Content Area
+//
+//////////////////////////
+
+
+//////////////////////////
+//
+// 1 - Splash Module
+//
+//////////////////////////
+
+.splash{
+	@include background-bevel($color-accent1, 0px, 50px, 0px, 0px);
+	padding:5px;
+		.innerbeveldiv{
+			@include background-bevel($white, 0px, 50px, 0px, 0px);
+			padding:$double-padding;
+		}
+		.pinkbeveled{
+			@include folded_corner($color-accent2, 31px, $white);	
+			margin: $half-padding 0 $half-padding 0;
+		}
+		.greenBeveled{
+			@include folded_corner($color-accent3, 31px, $white);	
+			h3{
+				@include folded_corner($color-accent3, 31px, $color-accent3);	
+			}			
+		}
+}
+
+//////////////////////////
+//
+// 2 - Left Sidebar on Homepage
+//
+//////////////////////////
+
+
+	#left_home {
+		h3{@include folded_corner($black, 31px, $white);}
+		.greenBeveled h3{ @include folded_corner($color-accent3, 31px, $color-accent3);	}
+		.pinkbeveled h3{ @include folded_corner($color-accent2, 31px, $color-accent2);}
+		.contestWinner h3{@include folded_corner($color-accent1, 31px, $white);}
+		//.contestWinner h4{@include folded_corner($black, 31px, $white);}
+	
+	}
+
+//////////////////////////
+//
+// 3 - Right Sidebar
+//
+//////////////////////////
+
+	#right_sidebar {
+	
+		h3{	
+			@include folded_corner($black, 31px, $white);	
+		}
+	
+		.darkGrey {@include background-bevel($color-darker-main, 0px, 24px, 0px, 0px);
+			h3{	
+				color:$white;
+				@include folded_corner($color-darker-main, 31px, $white);	
+			} 
+			p{
+				background-color: $color-darker-main;
+				color:$white;
+				padding:$half-padding;
+		
+			}
+		}
+	
+	
+	
+		.get_started a{
+			@include folded_corner($color-accent1, 31px, $white);	
+			&.greyLink{
+				@include folded_corner($color-main, 31px, $white);	
+			}
+		}
+	} //right_sidebar
+
+//////////////////////////
+//
+// 4 - Main Content Area
+//
+//////////////////////////
+
+	#content{
+	.beveled{
+		@include background-bevel($color-accent1, 0px, 24px, 0px, 0px);
+			padding:$half-padding;
+			padding-top:-10px;
+			margin: $half-padding 0 $half-padding 0;		
+		}
+		h1{
+			@include background-bevel($white, 0px, 20px, 0px, 0px);
+		}
+	}

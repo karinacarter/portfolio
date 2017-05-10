@@ -1,0 +1,198 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Header
+// 2 - body and container area
+// 3 - Footer
+// 4 - Entry Index Page
+// 5 - Homepage Splash
+// 6 - Clearfixing
+//
+//////////////////////////
+
+
+//////////////////////////
+//
+// 1 - Header
+//
+//////////////////////////
+	
+	
+	
+	#header{
+		@include pie-clearfix;
+		          
+		@include background(image-url($header-background-image-large, false, false));
+		background-repeat: no-repeat;
+		
+		p{margin:0px;padding: 0px;}
+		
+		.sponsors-row2{
+				margin-top: -$half-padding;
+			}
+		.sponsors-row1{
+			margin-right:$double-padding;}
+			
+			
+	}//header
+	
+	.menu_main,
+		.get_started{
+			@include horizontal-list;
+			li{
+				padding:$half-padding 0em;
+				&:last-of-type a{
+					border: 0px;
+				}
+			}
+		}
+	}//menu_main
+	._nav, ._getstarted{
+		background-color: $color-main;
+	}
+	
+	
+	.mod_loginloginbar	{
+		padding: 0 $half-padding;
+	}
+
+//////////////////////////
+//
+// 2 - body and container area
+//
+//////////////////////////
+
+	
+	body{
+		background:$body-bg-graident-start;
+		@include background(image-url($body-bg-image, false, false), linear-gradient($body-bg-graident-direction, $body-bg-graident-start, $body-bg-graident-end));
+	}
+	                     
+	                      
+	#container{
+		@include background($container-bg-color);
+	}
+	
+	
+	.large-screen-only{
+		display: none;
+	}
+	#underheader{
+		@include pie-clearfix;
+		background-color:$color-lighter-main;
+		border-bottom: 1px solid $color-main;
+		
+	}
+	
+	
+	.pagination ul,
+	#footer .menu{
+		@include horizontal-list;
+		margin:$default-padding;
+	}
+	
+	#main_body{padding:$default-padding;}
+
+//////////////////////////
+//
+// 3 - Footer
+//
+//////////////////////////
+
+
+	#footer {
+		//padding:$default-padding;
+	}
+	#footer .menu li{
+		padding:0px $default-padding;
+	}
+	
+	#footer .menu li:first-of-type{
+		border-right: 1px solid $color-darker-main;
+	}
+	.notify{
+		background-color: $color-main;
+		p{margin:0px; padding:0px;}
+	}
+
+//////////////////////////
+//
+// 4 - Entry Index Page
+//
+//////////////////////////
+
+
+	.item  .readmore{
+			margin-left:11.3em;
+		}
+	
+	.item h2, 
+	.item > div:nth-of-type(1),
+	#content > article > h1,
+	#content > article > div:nth-of-type(1){
+		margin:0px;
+		background-color:$color-lighter-main !important;
+	}
+	
+	.item {border-bottom: 1px solid $color-main;}
+	.item h2{
+		padding: $default-padding $default-padding 0 $default-padding;
+		text-transform: capitalize;
+		}
+	#content > article > h1{
+		padding: 0 $default-padding 0 0;
+		text-transform: capitalize;
+	}
+	.item > div:nth-of-type(1){
+		padding:$default-padding;
+	}
+
+//////////////////////////
+//
+// 5 - Homepage Splash
+//
+//////////////////////////
+
+	.greenBeveled ,
+	.pinkbeveled {
+		padding:$double-padding;
+		min-height: 7em;
+	}
+	.contestWinner{
+		h4{
+			@include background(image-url("2013-winnerSeal.png", false, false));
+			background-repeat: no-repeat;
+			margin: 0px;
+			padding: 21px 20px 30px 80px;
+			width: 260px;
+			overflow: hidden;
+		}
+	}
+
+//////////////////////////
+//
+// 6 - Clearfixing
+//
+//////////////////////////
+	.clearfix {
+		@include pie-clearfix;
+	}
+	
+	#header, .splash, .innerbeveldiv, #main_body, .contestWinner{
+		@include pie-clearfix;
+	
+	}
+	
+	#left_home{
+		@include pie-clearfix;
+	}
+
+	.item-page > div  {
+		@include pie-clearfix;
+			&:first-item{
+				width:50px !important;
+			}
+	}
+
+

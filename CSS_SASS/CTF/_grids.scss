@@ -1,0 +1,212 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Container
+// 2 - Header 
+// 3 - Under Header 
+// 4 - Main Body
+//
+//////////////////////////
+
+//////////////////////////
+//
+//  1 - Container
+//
+//////////////////////////
+
+#container,
+#footer,
+#loginheader{ 
+	 @include container ($total-columns);
+	 max-width:1000px;	 
+}
+
+
+
+//////////////////////////
+//
+//  2 - Header 
+//
+//////////////////////////
+
+
+	//// CTF/TB Logo ////
+		.ctf_Logo{@include span-columns(4,12);
+			img{
+				max-width:130px;
+				margin:$half-padding; 
+				}//imgs
+			}
+	////////////////
+	
+	//// Comsol and Mouser Logos ////
+	.sponsor_logos{	
+		@include span-columns(8 omega,12);
+		padding: $half-padding;
+				text-align: right;
+
+		.sponsors-row2{
+			img{max-width:100px;}//imgs
+
+		}
+		.sponsors-row1{
+			img{max-width:130px;}//imgs
+
+		}	
+		}
+		
+		
+	////////////////
+	.loginbar{
+		
+		//@include span-columns($half-total-columns omega,$total-columns);
+
+		
+	}
+	//// Main Navigation ////
+	._nav{@include span-columns($total-columns omega,$total-columns);}
+	
+	////////////////
+
+	._getstarted{@include span-columns($total-columns omega,$total-columns);}
+
+
+
+	////Break Points (medium) ////
+	
+@include at-breakpoint($medium) {
+	._nav{color:$total-columns;}
+	.ctf_Logo{
+				img{
+					max-width:none;
+					margin:$default-padding; 
+				}//imgs
+		}//ctf_logo 
+		
+		.sponsor_logos{
+			padding: 0em $default-padding;
+			margin-bottom:4px;
+	
+			.sponsors-row2,.sponsors-row1 {
+				img{max-width:none;
+					display:inline;	
+				}//imgs
+			}
+		}//sponsorlogos
+		
+		
+	._nav{	
+			width:45%;
+			float:right;
+		}
+	
+	._getstarted{
+		width:55%;
+		float:left;
+	}
+	.loginbar{
+		position:relative;
+		padding: $half-padding;
+		a{
+			color:$black;
+			text-decoration: underline;
+		}
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	
+}		
+		
+///////	
+		
+//////////////////////////
+//
+//  3 - Under Header 
+//
+//////////////////////////
+
+	._breadcrumbs{
+		@include span-columns(7,$total-columns);
+	}
+	
+	._header_search{
+		@include span-columns(3 omega,$total-columns);
+	}	
+	
+	form.gsc-search-box,
+	._breadcrumbs{
+		padding:.8em $half-padding 0px $half-padding;
+		margin:0px !important;
+	}
+
+//////////////////////////
+//
+//  4 - Main Body
+//
+//////////////////////////
+
+#main_body{
+ @include reset-columns;
+//@include span-columns($total-columns omega,$total-columns);
+}
+
+
+.pinkbeveled{
+	@include background-bevel(#ff5b8c, 0px, 20px, 0px, 0px);
+	padding:$half-padding;
+	padding-top:-10px;
+	margin: $half-padding 0 $half-padding 0;
+}
+
+.greenBeveled{
+	@include background-bevel(#00cba3, 0px, 20px, 0px, 0px);
+	padding:$half-padding;
+	padding-top:-10px;
+	margin: $half-padding 0 $half-padding 0;		
+}
+
+.entryImages{
+	@include span-columns(2,7);
+}	
+
+.winnerText	{
+	@include span-columns(5 omega,7);
+}
+////////////////////
+	
+/////////// Breakpoints  ////////////
+
+
+@include at-breakpoint($medium) {
+.ctf_Logo{
+			//float:left;
+			
+			img{
+				max-width:none;
+				margin:$default-padding; 
+			}//imgs
+	}//ctf_logo 
+	
+	.sponsor_logos{
+		padding: 2em 1em 0 0;
+		img{max-width:none;}//imgs
+		
+		}//s	
+	#left_home, #content{
+		@include span-columns(7,$total-columns);
+		}
+	.pinkbeveled{	width:48.5%; float:left;}
+	.greenBeveled{	width:48.5%; float:right}
+
+
+	
+	#right_sidebar{
+		@include span-columns(3 omega,$total-columns);
+		}
+		
+		
+		
+}
+
