@@ -1,12 +1,12 @@
 # Karina Carter's Portfolio 
 
 ## Live examples of sites that I created the full template for. 
-- expedition-z.com (Joomla)
-- anthonybrowncreates.com (Wordpress)
-- techbriefsmediagroup.com (Joomla)
-- contest.techbriefs.com (Joomla)
+- http://expedition-z.com/ (Joomla)
+- http://www.anthonybrowncreates.com/ (Wordpress)
+- http://www.techbriefsmediagroup.com/ (Joomla)
+- https://contest.techbriefs.com/ (Joomla)
 
 ## Older sites:
-- techbriefs.com (Joomla)
-- aerodefensetech.com (Joomla)
-- medicaldesignbriefs.com (Joomla)
+- http://www.techbriefs.com/ (Joomla)
+- http://www.aerodefensetech.com/ (Joomla)
+- http://www.medicaldesignbriefs.com/ (Joomla)
