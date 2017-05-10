@@ -1,0 +1,158 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - SUSY
+// 2 - Basic TBMG Grid Layout 
+// 3 - No Sidebar Version of TBMG site
+// 4 - Footer
+// 5 - Space Reservation Overrides
+//
+//////////////////////////
+
+
+
+
+
+//////////////////////////
+//
+// 1 - SUSY
+//
+//////////////////////////
+
+@import "susy";
+@import "compass/typography";
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+//////////////////////////
+//
+// 2 - Basic TBMG Grid Layout 
+//
+//////////////////////////
+
+	#tbmg_header,
+	#tbmg_content_above,
+	#tbmg_content,
+	#tbmg_footer{
+		@include container(1140px); // establish a layout context
+		@include span(1 of 1);
+		float:none;
+		@include clearfix();
+		margin: 0 auto;
+	}
+	#tbmg_logo{
+		width:250px;
+		float:left;
+		@include breakpoint($smallScreen) {
+			img{
+				max-width: 150px;
+				height: inherit;
+				position: absolute;
+				top:20px;
+			}	
+		}
+	}
+	.tbmg_mainMenu{
+		float: right;
+		clear:right;
+		}
+	#tbmg_content_sidebar{
+		@include breakpoint($smallScreen) {
+			display: none;
+		}
+		@include span(3 of 12);
+	}
+	#tbmg_content_main{
+		@include span(9 last of 12);
+		@include breakpoint($smallScreen) {
+			@include span(12 last of 12);
+		}
+	}
+	.slideshowck{
+		margin-bottom:50px;
+		@include breakpoint($smallScreen) {
+			margin-bottom:20px;
+		}
+	}
+	#tbmg_subnav{
+		display: none;
+			div{
+				display: none;
+			}
+			@include span(12 last of 12);
+			background-color: $header-subnav-bg;
+			a{color:#FFF;display: block;}
+			a:hover{
+				background: rgba(0,51,153,.25);
+			}
+			.moduletable{
+				background: rgba(0,51,153,.25);
+				@include span(6 of 12);
+			}
+	}
+
+
+//////////////////////////
+//
+// 3 - No Sidebar Version of TBMG site
+//
+//////////////////////////
+
+	.nosidebar{
+		#tbmg_content_main{
+			@include span(12 last of 12);
+			margin-top: 10px;
+			@include breakpoint($smallScreen) {
+				margin-top:0px;
+			}
+		}
+		#tbmg_content_sidebar{
+			display: none;
+		}	
+	}
+
+//////////////////////////
+//
+// 4 - Footer
+//
+//////////////////////////
+
+	#tbmg_footer{
+		margin-top:1em;
+		padding:1em;
+		
+		background-color:#ccc;
+		box-sizing: border-box;
+	}
+
+//////////////////////////
+//
+// 5 - Space Reservation Overrides
+//
+//////////////////////////
+
+	.space_reservation,
+	.tbmg_reports {
+		#tbmg_content,
+		#tbmg_content_above,
+		#tbmg_footer{
+			width: 100%;
+			max-width: 100%;
+		}
+		#tbmg_content_sidebar{
+			width:200px;
+		}
+		#tbmg_content_main{
+			float: left;
+			overflow-x: scroll;
+			}
+			.backRtoeports{
+				display: none;
+			}
+	}
+	.space_reservation{
+		    font-size: small;
+	}

@@ -1,0 +1,241 @@
+//////////////////////////
+//
+//  Table of Contents
+//
+// 1 - Basic Formatting
+// 2 - Sidebar
+// 3 - Sub Navigation
+// 4 - Mobile Menu
+// 5 - Space Reservation Menu
+//
+//////////////////////////
+
+
+
+
+
+//////////////////////////
+//
+// 1 - Basic Formatting
+//
+//////////////////////////
+
+
+a{
+	color:$main-link-color;
+	text-decoration:none;
+	}
+
+.tbmg_mainMenu {
+	.menu ul{display: none;}
+	@include horizontal-list;
+	margin-top: .75em;
+}
+
+#form-login-links{
+	@include horizontal-list;
+	margin-top:10px;
+	li{padding:5px;}
+	#form-login-forgot{
+		border-right:1px solid $black;
+	}
+}
+.tbmg_footer_menu{
+	
+	@include horizontal-list;
+	li{border-right:1px solid $black;}
+	li:last-child{border:0px;}
+}
+
+//////////////////////////
+//
+// 2 - Sidebar
+//
+//////////////////////////
+
+
+
+#tbmg_content_sidebar{ 
+	.side_menu{
+		margin:0px;
+		margin: 0;
+			padding: 0px;
+
+		a{display: block;
+			padding:1em;
+			}
+		li{
+			background-color:$sidebar-nav-bg;
+			border-bottom:1px solid $white;
+			list-style: none;
+			margin: 0;
+			padding: 0px;
+		}
+		li.current,
+		li.active{
+			background-color:$sidebar-nav-current;
+			font-weight: bold;
+		}
+		ul{
+			display:none;
+			margin-left:60px;
+			margin-bottom:20px;
+			li{list-style: square;
+				border:0px;
+				background:none;
+
+			}
+			
+		
+			a{padding:0px;
+				font-size:smaller;
+			}
+		
+		}
+		li.active{
+			ul{display: block;}
+		}
+		
+		
+	}
+}
+
+//////////////////////////
+//
+// 3 - Sub Navigation
+//
+//////////////////////////
+
+
+	#tbmg_subnav{ 
+		margin-top: 20px;
+		ul{
+			margin:0px;
+			margin: 0;
+			padding: 0px;
+				li {
+					list-style: none;
+					width: 50%;
+					float:left;
+				}
+		}
+		a{				
+			padding:10px;
+			display: block;
+		}
+	 }
+	
+	//Markets Menu Item
+	
+	.subnav-132{
+		position: relative;
+		margin-left:23%;
+		@include arrow('top','center', 15px, #5f8bC5);
+	
+	} 
+	
+	//Magazines Menu Item
+	
+	.subnav-131{
+		position: relative;
+		margin-left:33%;
+		@include arrow('top','center', 15px, #5f8bC5);
+	
+	}
+	
+	
+	//Digital Menu Item
+	.subnav-133{
+		margin-left:42%;
+		position: relative;
+		@include arrow('top','center', 15px, #5f8bC5);
+	
+	}
+	
+	//Custom Menu Item 
+	
+	.subnav-134{
+		position: relative;
+		margin-left:50%;
+		@include arrow('top','center', 15px, #5f8bC5);
+	
+	
+	}
+	//Webinar Menu Item
+	.subnav-173{	
+		position: relative;
+		margin-left:57%;
+		@include arrow('top','webinars', 15px, #5f8bC5);
+	
+	}
+
+//////////////////////////
+//
+// 4 - Mobile Menu
+//
+//////////////////////////
+
+	.slicknav_menu {
+		display: none;
+	}
+	@include breakpoint($smallScreen) {
+		
+		.tbmg_mainMenu {
+			display: none;
+		}
+		.slicknav_menu {
+			display: block;
+		}
+	}
+
+
+//////////////////////////
+//
+// 5 - Space Reservation Menu
+//
+//////////////////////////
+
+
+	.space_reservation_menu{
+		height: auto;
+		margin: 0px;
+		padding: 5px 0px;
+		 a{
+			color:#fff;
+			text-decoration: none;
+			padding: 8px;
+			display: block;
+			font-weight: normal;
+		}
+		li li.active a{
+			background-color: rgb(119,138,195);
+			background-color: rgba(255, 255, 255, .4);
+			color:#333;
+		}
+		li{
+			border-top: 1px solid #fff;
+			list-style: none;
+			font-size: medium;
+		    text-align: center;
+		    margin: 0;
+		    color: rgb(299,299,299);
+		    color: rgba(255, 255, 255, 0.6);
+		        border-radius: 5px;
+		        li{
+			        border-radius: 0px;
+		        }
+		}
+		li.divider{
+			font-weight: bold;
+		    font-size:1.0em;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+		.item-350,
+		.item-423{
+			background-color: rgb(29,61,156);
+			margin-bottom: 10px;
+		}
+	}

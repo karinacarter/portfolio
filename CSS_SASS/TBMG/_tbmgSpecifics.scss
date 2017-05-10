@@ -1,0 +1,216 @@
+#tbmg_content_main img{
+	float:right;
+	margin-left:15px;
+	margin-bottom: 15px;
+}
+
+
+#tbmg_content_main img.magazine-logo{
+	
+	
+	float: none;
+	margin:0px;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+dt.error{
+	display: none;
+
+}
+
+
+
+
+.error ul{
+	list-style-type: none;
+	color:#000;
+	padding:.5em;
+	margin:.5em 0;
+	font-size:1.5em;
+	font-family: "Eurostile Bold";
+	line-height: 2em;
+
+}
+.error .registerheading{
+    font-size: .75em;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Eurostile";
+}
+.loginPage #tbmg_content_main .moduletable{
+	width:50%;
+	margin: 0 auto;
+}
+
+
+
+.emptyheading{
+	height:50px;
+}
+
+
+.home .emptyheading,
+.home #system-message-container{
+	display: none;
+}
+
+.userdata{
+	#form-login-password,
+	#form-login-username,
+	#form-login-remember,
+	#form-login-submit{
+		padding:10px;
+	}
+}
+
+
+
+.downloadbox{
+	@include pointer();
+	width:85%;
+	
+
+
+	    /* border: 1px solid #0f0; */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-right: 0px;
+    background-color: rgba(139,172,207,1);
+    color: #FFF;
+    ul{
+	    list-style: none;
+	    
+    }
+    a{
+	    color:#FFF;
+    }
+}
+
+
+
+
+
+
+
+.reportPage{
+	.tableHeaders{
+    	background-color: rgba(139,172,207,1);
+		padding:10px;
+		text-align: center;
+		font-weight: bold;
+	}
+	tr:nth-child(even) {background: #CCC}
+	tr:nth-child(odd) {background: #FFF}
+	th{
+		border:1px solid #666;
+		padding:5px;
+	}
+	td{padding:5px;
+		border:1px solid #666;
+	}
+	/****************************************************
+**
+** 2. Edition Styling			   
+**
+*****************************************************/
+
+  
+	.edition-Automotive td:nth-child(3){background-color: rgb(255, 239, 213) !important;color: rgb(128, 0, 0);}
+	
+	.edition-Photonics td:nth-child(3){background-color: rgb(255, 255, 0) !important;color: rgb(0, 0, 0);}
+	
+	.edition-MilAero td:nth-child(3),
+	.edition-Defense td:nth-child(3){background-color: rgb(0, 0, 139) !important;color: rgb(240, 230, 140);}
+	
+	.edition-Main td:nth-child(3){background-color: rgb(255, 255, 255) !important;}
+	
+	.edition-Medical td:nth-child(3){color: rgb(255, 255, 255);background-color: rgb(255, 0, 0) !important;}
+	
+	.edition-SensorsTestMeasurement td:nth-child(3),
+	.edition-SensorsDataAcquisition td:nth-child(3){background-color: rgb(144, 238, 144) !important;}
+	
+	.edition-Aerospace td:nth-child(3){background-color: rgb(0, 173, 238) !important;}
+	
+	.edition-Electronics td:nth-child(3){background-color: rgb(178, 34, 34) !important;color: rgb(152, 251, 152);}
+	
+	.edition-Materials td:nth-child(3){background-color: rgb(95, 158, 160) !important;}
+	
+	.edition-MotionControl td:nth-child(3){background-color: rgb(205, 133, 63) !important;}
+	
+	.edition-International-Asia td:nth-child(3){background-color: rgb(255, 0, 0) !important;color: rgb(255, 255, 0);}
+	
+	.edition-Power td:nth-child(3),
+	.edition-PowerManagement td:nth-child(3){background-color: rgb(0, 0, 0) !important;color: rgb(255, 255, 255);}
+	
+	.edition-CamerasImaging td:nth-child(3){color: rgb(0, 0, 139);background-color: rgb(255, 218, 185);}
+	
+	.edition-ImagingCameras  td:nth-child(3){background-color: rgb(0, 250, 154) !important;color: rgb(0, 0, 139);}
+	
+	.edition-Single-Sponsor td:nth-child(3), 
+	td.edition-Single-sponsor td:nth-child(3),
+	.edition-PhotonicsImagingCameras td:nth-child(3),
+	.edition-MainNTB td:nth-child(3),
+	.edition-MainSAE td:nth-child(3),
+	.edition-VideoV-source td:nth-child(3),
+	.edition-LightingLEDs td:nth-child(3),
+	.edition-LightingTechnology td:nth-child(3){
+		background-color: rgb(255, 255, 255) !important;
+	} 
+	
+	td.edition-V-Source{background-color: rgb(255, 255, 255) !important;}
+	td.edition- {background-color: rgb(94, 255, 163) !important;}
+  
+	/* SAE Digital */
+	tr.SAE_Aerospace_Engineering{background-color: #e7b2af !important;}
+	tr.SAE_Automotive_Engineering{background-color: #f7f8c3 !important;}
+	tr.SAE_Electronics{background-color: #d2f8c3 !important;}
+	tr.SAE_Heavy-Duty{background-color: #d2b2e2 !important;}
+	tr.SAE_Off-Highway_Engineering{background-color: #c3ce84 !important;}
+	tr.SAE_Vehicle_Engineering{background-color: #cec399 !important;}
+	
+	
+	
+}
+
+.esource .reportPage{
+	 font-size: smaller;
+	 tbody td:nth-child(1),
+	 .header-Recid{
+	display: none;
+		
+	}
+	
+	}
+
+
+.red{
+		color:red;
+	}
+#tbmg_content_main {
+	overflow: auto;
+}
+/** Boot Strap Stuff **/
+
+
+.nav>li>a:hover, 
+.nav>li>a:focus{
+	
+	background-color: inherit;
+
+}
+
+
+.tbmg_mainMenu ul{
+	margin-top: 1em;
+}
+
+
+#tbmg_content_sidebar ul.small{
+	font-size: inherit;
+}
