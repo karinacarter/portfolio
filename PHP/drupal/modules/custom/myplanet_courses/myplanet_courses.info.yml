@@ -1,0 +1,6 @@
+name: Myplanet Course Test Project
+description: Creates a test page for the courses
+package: MyPlanet Drupal Test
+
+type: module
+core: 8.x

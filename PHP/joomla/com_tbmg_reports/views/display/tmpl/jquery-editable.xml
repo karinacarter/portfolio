@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="jquery-editable">
+		<message>Displays Rows from a table using jquery-tabledit (http://markcell.github.io/jquery-tabled).</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset name="request">
+			<field name="serverHost"
+			       type="list"
+			       default=""
+			       label="Database Server Location"
+			       description="">
+				<option value="local">localhost</option>
+				<option value="aws.abpi.net">aws.abpi</option>
+				<option value="assets.techbriefs.com">assets.techbriefs.com</option>
+			</field>
+			<field name="databaseName"
+			       type="text"
+			       default="blasts"
+			       label="Name of Database"
+			       description=""
+			       size="10"
+			/>
+			<field name="tableName"
+			       type="text"
+			       default="Table Name"
+			       label="Name of table"
+			       description=""
+			       size="10"
+			/>
+			<field name="rows"
+			       type="textarea"
+			       default="*"
+			       label="comma,seperated row list"
+			       description=""
+			       rows="10"
+			       cols="5"
+			       filter="raw"
+			/>
+			<field name="tableHeader"
+			       type="text"
+			       default=""
+			       label="Header Above Reports Table"
+			       description=""
+			       size="10"
+			       filter="raw"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

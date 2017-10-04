@@ -1,0 +1,11 @@
+circle-progress:
+  version: 1.x
+  css:
+    theme:
+      css/circleprogress.css: {}
+  js:
+    js/circle-progress.min.js: {}
+    js/myplanet_progress.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

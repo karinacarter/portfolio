@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Display">
+		<message>Displays Rows from a table.</message>
+	</layout>
+	
+	<fields name="params" addfieldpath="/administrator/components/com_tbmg_reports/models/fields">
+		<fieldset name="basic" label="TBMG Reports">
+			<field name="serverHost" label="Database Server Location"
+			       type="list">
+				<option value="local">localhost</option>
+				<option value="aws.abpi.net">aws.abpi</option>
+				<option value="assets.techbriefs.com">assets.techbriefs.com</option>
+			</field>
+			<field name="databaseName" label="Name of Database"
+			       type="text"
+			       default="blasts"
+			       size="10"
+			/>
+			<field name="tableName" label="Name of table"
+			       type="text"
+			       default="Table Name"
+			       size="10"
+			/>
+			<!--<field name="rows" type="text" default="" label="Comma,seperated row list" description="" size="10" filter="raw" />-->
+			<field name="rows" label="comma,seperated row list"
+			       type="textarea"
+			       default="*"
+			       rows="10" cols="5"
+			       filter="raw"
+			/>
+			<field name="tableHeader" label="Header Above Reports Table"
+			       type="text"
+			       size="10"
+			       filter="raw"
+			/>
+		</fieldset>
+		<fieldset name="columns" label="TBMG Column Format">
+			<field type="spacer" name="myspacer"
+			       label="Select/Checkbox Options  example: {value: 'Quarter Page', text: '1/4 Page'},{value: 'Third Page', text: '1/3 Page'}"
+			/>
+			<field name="Columns" label="Columns"
+			       type="editfields"
+			       description="Editable Fields"
+			       multiple="true"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

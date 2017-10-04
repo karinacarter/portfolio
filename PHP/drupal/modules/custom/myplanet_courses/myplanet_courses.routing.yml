@@ -1,0 +1,7 @@
+myplanet_courses.content:
+  path: '/courses'
+  defaults:
+    _controller: '\Drupal\myplanet_courses\Controller\coursesController::content'
+    _title: 'Courses'
+  requirements:
+    _permission: 'access content'
