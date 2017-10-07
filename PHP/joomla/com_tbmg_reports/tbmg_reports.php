@@ -1,16 +1,16 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted access');
- 
-// import joomla controller library
-jimport('joomla.application.component.controller');
- 
-// Get an instance of the controller prefixed by tbmgReports
-$controller = JControllerLegacy::getInstance('tbmgReports');
- 
-// Perform the Request task
-$input = JFactory::getApplication()->input;
-$controller->execute($input->getCmd('task'));
- 
-// Redirect if set by the controller
+/**
+ * @package     TBMG.Site
+ * @subpackage  com_tbmg_reports
+ *
+ * @copyright   2017 Tech Briefs Media Group All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+
+JLoader::register('TBMGReportsHelperDatabase', JPATH_COMPONENT . '/helpers/database.php');
+
+$controller = JControllerLegacy::getInstance('TBMGReports');
+$controller->execute(JFactory::getApplication()->input->get('task'));
 $controller->redirect();

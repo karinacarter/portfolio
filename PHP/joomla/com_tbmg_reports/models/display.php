@@ -1,54 +1,57 @@
 <?php
-// No direct access to this file
-defined('_JEXEC') or die('Restricted access');
- 
-// import Joomla modelitem library
-jimport('joomla.application.component.modelitem');
- 
-class tbmgReportsModelDisplay extends JModelItem{
-	protected $data;
-    public function getData() {
-	    
-	    // Get The Parameters from the menu.    
-	    $jinput = JFactory::getApplication()->input;
-		$serverHost     = $jinput->get('serverHost', 'localhost');
-		$tableName     = $jinput->get('tableName', '');
-		$rows     = $jinput->get('rows', 'ALL', 'raw');
-		$databaseName     = $jinput->get('databaseName', 'blasts');
-		if($rows == "ALL"){$rows="*";}
-        $option = array(); //prevent problems
+/**
+ * @package    TBMG.Site
+ * @subpackage TBMG_Reports
+ *
+ * @author     Tech Briefs Media Group <it@techbriefs.com>
+ * @copyright  2017 Tech Briefs Media Group. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @link       http://www.techbriefsmediagroup.com
+ */
 
-		// Hard coded Database information
-		if ($serverHost != 'local'){
-			$option['driver']   = 'mysql';            // Database driver name
-			$option['host']     = $serverHost;    // Database host name
-			$option['user']     = 'XXXX';       // User for database authentication
-			$option['password'] = 'XXXX';   // Password for database authentication
-			$option['database'] = $databaseName;      // Database name
-			$option['prefix']   = '';             // Database prefix (may be empty)
+defined('_JEXEC') or die;
+
+/**
+ * Class TBMGReportsModelDisplay
+ *
+ * @since 2.5
+ */
+class TBMGReportsModelDisplay extends JModelItem
+{
+	/**
+	 * Pull data for display
+	 *
+	 * @return mixed
+	 * @throws \Exception
+	 * @throws \RuntimeException
+	 *
+	 * @since 2.5
+	 */
+	public function getData()
+	{
+		$jinput = JFactory::getApplication()->getParams();
 		
+		$tableName = $jinput->get('tableName', '');
+		$rows      = $jinput->get('rows', 'ALL', 'raw');
 		
-		}else {
-				$option['driver']   = 'mysql';            // Database driver name
-			$option['host']     = 'localhost';    // Database host name
-			$option['user']     = 'XXXX';       // User for database authentication
-			$option['password'] = 'XXXX';   // Password for database authentication
-			$option['database'] = 'intranet';      // Database name
-			$option['prefix']   = '';             // Database prefix (may be empty)
+		if ($rows === 'ALL') {
+			$rows = '*';
 		}
-	
+		
+		$db = TBMGReportsHelperDatabase::getDBO();
+		
 
-		// Connect to the database and Grab the Data
-		$db = JDatabaseDriver::getInstance( $option );
 		$query = $db->getQuery(true);
 		
 		$query
-		    ->select($rows)
-		    ->from($db->quoteName($tableName));
+			->select($rows)
+			->from($db->quoteName($tableName));
+		#   ->where($db->quoteName('profile_key') . ' LIKE '. $db->quote('\'custom.%\''))
+		#   ->order('ordering ASC')
+		//;
 		
-	
 		$db->setQuery($query);
-		$data = $db->loadAssocList();
-	    return $data;
+		
+		return $db->loadAssocList();
 	}
 }

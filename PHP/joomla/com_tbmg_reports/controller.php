@@ -10,4 +10,5 @@ jimport('joomla.application.component.controller');
  */
 class tbmgReportsController extends JControllerLegacy
 {
-}
+	
+	}

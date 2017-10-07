@@ -38,8 +38,8 @@ class TBMGReportsHelperDatabase
 			
 			$option = [
 				'host'     => $serverHost,
-				'user'     => 'tedmor',
-				'password' => 'fargone',
+				'user'     => 'XXX',
+				'password' => 'XXX',
 				'database' => $databaseName,
 			];
 			
